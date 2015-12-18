@@ -32,6 +32,7 @@ void setup() {
   EEPROM.begin(1024);
   Serial << endl << "ready" << endl;
   //startWifi();
+  connectToWifi("SAP-Guest", "sdfsd","sdfsdfD");
   Serial << "Waiting for auto-connect" << endl;
   initPIR();
 }
@@ -39,10 +40,15 @@ void setup() {
 
 boolean startedOTA = false;
 void loop() {
-  handleWifi();
-  handleOTA();
-  if (!startedOTA) {
-    processUserInput();
-  }
+  //handleWifi();
+//    if (digitalRead(16)) {
+//      Serial.println("111111111111111111");
+//    } else {
+//      Serial.println("0");
+//    }
+//  handleOTA();
+//  if (!startedOTA) {
+//    processUserInput();
+//  }
   handlePIR();
 }
