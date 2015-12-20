@@ -17,7 +17,7 @@ void connectToWifi(const char *s1, const char *s2, const char *s3) {
 
   wifiConnectToStoredSSID();
   Serial << "Connecting to " << s1 << endl;
-  for (int i=0; i<10 && WiFi.status() != WL_CONNECTED; i--) {
+  for (int i=0; i<10 && WiFi.status() != WL_CONNECTED; i++) {
     handleWifi();
     delay(1000);
   }

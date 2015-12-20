@@ -28,11 +28,12 @@ char *extractStringFromQuotes(const char* src, char *dest, int destSize=19) ;
 
 void setup() {
   Serial.begin(9600);
+  delay(5000);
   Serial << "vMove PIR WiFi module v1" << endl;
   EEPROM.begin(1024);
   Serial << endl << "ready" << endl;
   //startWifi();
-  connectToWifi("SAP-Guest", "sdfsd","sdfsdfD");
+  connectToWifi("vladiGome", "0888414447", "");
   Serial << "Waiting for auto-connect" << endl;
   initPIR();
 }
